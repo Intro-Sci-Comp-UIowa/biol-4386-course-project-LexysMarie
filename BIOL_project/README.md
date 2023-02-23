@@ -17,13 +17,17 @@ Fig 7. NMNAT2 abundance is positively correlated to the levels of synaptic prote
 2) Where and how will you obtain the data?
 	a. The data is presented in an excel sheet in figure S1. There are links for figure S1 provided in the paper itself, which can be found in the Supporting Information section of the paper.
 3) What are the main steps needed to recreate the figure?
-	a. I plan on graphing the figure in R. The basic syntax to create a line graph in R is displayed below. I plan on using a variation of this syntax to create my figure. The basic script steps are also displayed below.
+	a. I plan on graphing the figure in R. The basic syntax to create a line graph in R is displayed below. I plan on using a variation of this syntax to create my figure. The basic script steps are also displayed below. Finally, as suggested, I'm going to generate a summary statistics table, with code shown below.
 		i. plot (v,type,col,xlab,ylab)
 		ii. Script Steps:
 			1. Create the data for the chart
 			2. Give the chart a file name
 			3. Plot the bar chart
 			4. Save the file
+		iii. Summary Statistics:
+			1. vtable::sumtable()
+*Updates*
+ - Added raw data to data file and in separate folder on github repository on Monday, February 20, 2023; 3:27 pm
 
 **References**
 1) Ali YO, Allen HM, Yu L, et al., NMNAT2:HSP90 complex mediates proteostasis in proteinopathies. *PLOS Biology*. June 2 2016; doi:0.1371/journal.phbio.1002472
