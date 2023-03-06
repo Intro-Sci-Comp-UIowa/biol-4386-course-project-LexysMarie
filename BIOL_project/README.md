@@ -75,6 +75,9 @@ Data acquisition: Link found in original paper
 4) Save the file: 
 	a. dev.off 
 
+*Summary Statistics Table*
+1)Generate a summary statistic table:
+	a. vtable::sumtable()
 
 **References**
 1) Ali YO, Allen HM, Yu L, et al., NMNAT2:HSP90 complex mediates proteostasis in proteinopathies. *PLOS Biology*. June 2 2016; doi:0.1371/journal.phbio.1002472
