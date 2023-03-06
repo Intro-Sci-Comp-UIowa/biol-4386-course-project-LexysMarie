@@ -29,6 +29,54 @@ Fig 7. NMNAT2 abundance is positively correlated to the levels of synaptic prote
 *Updates*
  - Added raw data to data file and in separate folder on github repository on Monday, February 20, 2023; 3:27 pm
 
+
+## Homework 2
+
+**Methods**
+
+*Data*
+Data source: Excel file
+Data acquisition: Link found in original paper
+
+*Methods*
+*Scatterplot Formation*
+1) Save data in R:
+	a. save(data, file = "Figure7D.Rdata")
+
+2) Create the data for the chart:
+	a. input <- Fold Change to Plot[c,('wt','het'
+
+3) Give the chart file a name:
+	a. png(file = "Figure_7D.png")
+
+4) Plot the bar chart:
+	a. plot(x = input$wt,y = input$het,
+		i. xlab = "Normalized NMNAT2 level",
+		ii. ylab = "Normalized Fold Change",
+		iii. xlim c(0,2.5),
+		iv. ylim c(0,2.5),
+		v. main = "NMNAT2 abundance is positively correlated to the levels of synaptic proteins"
+	b.)
+
+5) Save the file:
+	a. dev.off()
+
+
+*Scatterplot Matrix*
+1) Give the chart file a name:
+	a. png(file = "Figure_7D matrices.png")
+
+2)Plot the matrices between 6 variables given 6 plots
+
+3) One variable with 5 others and total 6 variables.
+	a. pairs(~SNAP25+SYPH+HSP90+VGluT1+Rim1-alpha+NR1,data = Figure7D,
+		i. main = "NMNAT2 abundance is positively correlated to the level of synaptic proteins")
+
+4) Save the file: 
+	a. dev.off 
+
+
 **References**
 1) Ali YO, Allen HM, Yu L, et al., NMNAT2:HSP90 complex mediates proteostasis in proteinopathies. *PLOS Biology*. June 2 2016; doi:0.1371/journal.phbio.1002472
 2) "R - Line Graphs." *TutorialsPoint*, TutorialsPoint, 28 July 2021, https://www.tutorialspoint.com/r/r_line_graphs_.htm.
+3) "R - Scatterplots." *TutorialsPoint*, TutorialsPoint, 2023, https://www.tutorialspoint.com/r/r.scatterplots.htm
