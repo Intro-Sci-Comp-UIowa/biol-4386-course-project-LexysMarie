@@ -79,6 +79,36 @@ Data acquisition: Link found in original paper
 1)Generate a summary statistic table:
 	a. vtable::sumtable()
 
+**Updated Methods**
+Previously, I had wanted to use just R to generate my figure. Now, however, I hope to use the ggplot2 package in R to generate my figure. Below is what the code will look like to do so.
+
+
+# Load the ggplot2 package
+library(gglot2)
+
+# Create a data frame
+mydata <- data.frame(col1 = c(1,2,3), col2 = c("A", "B", "C"))
+
+# Save as a CSV file
+write.csv(mydata, file = "mydata.csv", row.names = FALSE)
+
+# Import your data
+mydata <- read.csv("mydata.csv")
+
+# Create a ggplot object
+myplot <- ggplot(mydata, aes(x = variabbles1, y = variable2))
+
+# Add a scatterplot layer
+myplot + geom_point()
+
+# Customize the plot with titles and labels
+myplot + geom_point()
+	ggtitle("NMNAT2 abundance is positively correlated to the levels of synaptic proteins") +
+	xlab("Normalized NMNAT2 level") +
+	ylab("Normalized fold change") +
+	scale_color_manual(values = c("red", "blue", "green", "pink", "purple", "orange")
+
+
 **References**
 1) Ali YO, Allen HM, Yu L, et al., NMNAT2:HSP90 complex mediates proteostasis in proteinopathies. *PLOS Biology*. June 2 2016; doi:0.1371/journal.phbio.1002472
 2) "R - Line Graphs." *TutorialsPoint*, TutorialsPoint, 28 July 2021, https://www.tutorialspoint.com/r/r_line_graphs_.htm.
