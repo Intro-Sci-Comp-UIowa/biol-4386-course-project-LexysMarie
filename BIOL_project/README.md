@@ -105,7 +105,7 @@ my_data_long <- gather(my_data, key = "Proteins", value = "value", -c(name, NMNA
 library(ggplot2)
 
 # Create a ggplot object
-myplot <- ggplot(my_data, aes(x = Proteins, y = names))
+myplot <- ggplot(my_data, aes(x = Proteins, y = value))
 
 # Add a scatterplot layer
 myplot + geom_point()
