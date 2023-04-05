@@ -130,8 +130,7 @@ myplot + facet_wrap(~Proteins)
 myplot + scale_color_manual(values = c("WT" = "blue", "HET" = "green")
 
 # Customize the plot with titles and labels
-myplot + geom_point()
-	ggtitle("NMNAT2 abundance is positively correlated to the levels of synaptic proteins") +
+myplot + ggtitle("NMNAT2 abundance is positively correlated to the levels of synaptic proteins") +
 	xlab("Normalized NMNAT2 level") +
 	ylab("Normalized fold change")
 
