@@ -105,16 +105,16 @@ my_data_long <- gather(my_data, key = "Proteins", value = "value", -c(name, NMNA
 library(ggplot2)
 
 # Create a ggplot object
-myplot <- ggplot(my_data, aes(x = Proteins, y = value))
+myplot <- ggplot(my_data_long, aes(x = Proteins, y = value))
 
 # Add a scatterplot layer
 myplot + geom_point()
 
+#Add lines of best fit to each of the panels
+myplot + geom_smooth(method = "lm", se = FALSE)
+
 #Create a paneled scatterplot
 myplot + facet_wrap(~Proteins)
-
-#Add lines of best fit to each of the panels
-myplot + geom_smooth(method = "lm")
 
 # Customize the plot with titles and labels
 myplot + geom_point()
