@@ -121,7 +121,7 @@ my_data_long %>% mutate(genotype = factor(substr(name, 1, 2), levels = c("HE", "
 myplot + geom_point(aes(color = genoytpe))
 
 #Add lines of best fit to each of the panels
-myplot + geom_smooth(method = "lm", se = FALSE, color = "black")
+myplot + geom_smooth(method = "lm", se = FALSE, color = "black", size = 0.5)
 
 #Create a paneled scatterplot
 myplot + facet_wrap(~Proteins)
@@ -133,6 +133,11 @@ myplot + scale_color_manual(values = c("WT" = "blue", "HET" = "green")
 myplot + ggtitle("NMNAT2 abundance is positively correlated to the levels of synaptic proteins") +
 	xlab("Normalized NMNAT2 level") +
 	ylab("Normalized fold change")
+
+
+#Results
+![Figure 7 Reconstructed](https://github.com/Intro-Sci-Comp-UIowa/biol-4386-course-project-LexysMarie/blob/main/BIOL_project/Intro%20to%20Scientific%20Computing%20Final%20Project.png)
+
 
 
 **References**
