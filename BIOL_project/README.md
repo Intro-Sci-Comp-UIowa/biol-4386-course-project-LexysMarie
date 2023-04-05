@@ -107,6 +107,9 @@ library(ggplot2)
 # Create a ggplot object
 myplot <- ggplot(my_data_long, aes(x = Proteins, y = value))
 
+#Convert "name" to a factor
+my_data_long$name <- as.factor(my_data_long$name)
+
 # Add a scatterplot layer
 myplot + geom_point()
 
@@ -115,6 +118,10 @@ myplot + geom_smooth(method = "lm", se = FALSE)
 
 #Create a paneled scatterplot
 myplot + facet_wrap(~Proteins)
+
+#Add color to the "HET" and "WT" variables
+myplot + scale_color_manual(values = c("WT1" = "blue", "WT2" = "blue", "WT3" = "blue", "WT4" = "blue", "WT5" = "blue", "WT6" = "blue", "HET1" = "green", "HET2" = "green", "HET3" = "green", "HET4" = "green", "HET5" = "green", "HET6" = "green")
+
 
 # Customize the plot with titles and labels
 myplot + geom_point()
