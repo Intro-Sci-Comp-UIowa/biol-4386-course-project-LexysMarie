@@ -12,7 +12,9 @@ In *Drosophila*, *Drosophila* NMNAT (*d*NMNAT) acts as a molecular chaperone. Mo
 
 Proteinopathies, like AD and tauopathies, are characterized by stereotypic aggregated proteins. This pathology can also be associated with cognitive impairment. It has been hypothesized that enhancing chaperone activity can help to establish a cytoprotetective state. Cytoprotective states occur when cellular damage, caused by misfolding or aggregation associated proteinopathies, is protected against in the body. In AD, the role of chaperones has been studied in depth, especially in regard to tau aggregation and fibrillization. It has been observed that chaperones like HSP70 and HSP90 preferentially bind to hyperphosphorlyated human Tau (p-hTau) and paired helical filamentous tau. Overexpression of these two chaperones inhibit the early stages of amyloid aggregation in AD. This paper aimed to answer three questions: Does NMNAT2 act as a chaperone? Is chaperone activity required for NMNAT2 to reduce tauopathy and protect neurons against protein stress? And how does NMNAT2 exert its chaperone function? To answer these questions, this study examined the relationship between *nmnat2* mRNA levels and the cognitive capabilities and AD pathology of a large cohort of human subjects.
 
-In the figure that I'm recreating (figure 7D; see below), it was determined beforehand that synapses are usually the first structures lost in neurodegenerative disease. In fact, NMNAT2 has been detected in synaptic membranes and vesicles of cortical neurons. This data suggests that NMNAT2 plays a role in synaptic maintenance. To test this theory, presynaptic proteins (VGluT1, SNAP25, RIM1alpha, and SYPH) in both wild-type mice and mice without NMNAT2 were compared. Additionally, levels of the chaperone HSP90 and N-methyl-D-aspartate receptor 1 (NR1) in wild-type and NMNAT2 knockout mice were also compared. It was determined that presynaptic protein levels are positively correlated with NMNAT2 levels. However, there was no significant correlation between HSP90 and NR1 and NMNAT2. This data indicates that NMNAT2 plays a significant role in synaptic maintenance.
+The figure that I'm recreating was based on the results of a Western Blot analysis (figure 6; see below). In the figure that I'm recreating (figure 7D; see below), it was determined beforehand that synapses are usually the first structures lost in neurodegenerative disease. In fact, NMNAT2 has been detected in synaptic membranes and vesicles of cortical neurons. This data suggests that NMNAT2 plays a role in synaptic maintenance. To test this theory, presynaptic proteins (VGluT1, SNAP25, RIM1alpha, and SYPH) in both wild-type mice and mice without NMNAT2 were compared. Additionally, levels of the chaperone HSP90 and N-methyl-D-aspartate receptor 1 (NR1) in wild-type and NMNAT2 knockout mice were also compared. It was determined that presynaptic protein levels are positively correlated with NMNAT2 levels. However, there was no significant correlation between HSP90 and NR1 and NMNAT2. This data indicates that NMNAT2 plays a significant role in synaptic maintenance.
+
+![Figure 6](https://github.com/Intro-Sci-Comp-UIowa/biol-4386-course-project-LexysMarie/blob/main/BIOL_project/Screen%20Shot%202023-04-06%20at%2012.11.48%20PM.png)
 
 ![Figure 7](https://github.com/Intro-Sci-Comp-UIowa/biol-4386-course-project-LexysMarie/blob/main/BIOL_project/Screen%20Shot%202023-01-29%20at%202.13.03%20PM.png)
 
@@ -134,6 +136,9 @@ myplot + ggtitle("NMNAT2 abundance is positively correlated to the levels of syn
 	xlab("Normalized NMNAT2 level") +
 	ylab("Normalized fold change")
 
+#Generate a summary statistics table
+summary(my_data_long)
+
 
 #Results
 
@@ -141,7 +146,12 @@ myplot + ggtitle("NMNAT2 abundance is positively correlated to the levels of syn
 
 The regression lines show the correlation between NMNAT2 and other synaptic proteins. Synaptic proteins analyzed include SYPH, SNAP25, VGluT1, RIM1alpha, HSP90, and NR1. Protein levels were normalized to GAPDH.
 
-This figure is based on results found in a Western Blot (shown above). The figure represents the relationship between NMNAT2 and other synaptic proteins for WT mice and mice heterozygous for NMNAT2. The regression line shows the relationship between both the heterozygotes and the WT mice. The purpose of this experiment was to determine how NMNAT2 interacted with the protein complex HSP90. The paper that this figure was based on (reference below) proved that NMNAT2 complexes with HSP90 to refold aggregated protein substrates. This occurs because NMNAT2 is missing a unique C-terminal ATP site for its refoldase activity. HSP90 activates this site. 
+This figure is based on results found in a Western Blot (figure 6; shown above). The figure represents the relationship between NMNAT2 and other synaptic proteins for WT mice and mice heterozygous for NMNAT2. The regression line shows the relationship between both the heterozygotes and the WT mice. The purpose of this experiment was to determine how NMNAT2 interacted with the protein complex HSP90. The paper that this figure was based on (reference below) proved that NMNAT2 complexes with HSP90 to refold aggregated protein substrates. This occurs because NMNAT2 is missing a unique C-terminal ATP site for its refoldase activity. HSP90 activates this site. 
+
+
+#Next Step of Analysis
+I plan on generating a summary statistics table to help explain the figure more. To do this, I will follow the code detailed in the Methods section.
+
 
 **References**
 1) Ali YO, Allen HM, Yu L, et al., NMNAT2:HSP90 complex mediates proteostasis in proteinopathies. *PLOS Biology*. June 2 2016; doi:0.1371/journal.phbio.1002472
