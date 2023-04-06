@@ -170,7 +170,7 @@ myplot + ggtitle("NMNAT2 abundance is positively correlated to the levels of syn
 summary(my_data_long)
 
 
-# Results
+## Results
 
 ![Figure 7 Reconstructed](https://github.com/Intro-Sci-Comp-UIowa/biol-4386-course-project-LexysMarie/blob/main/BIOL_project/Intro%20to%20Scientific%20Computing%20Final%20Project.png)
 
@@ -179,7 +179,7 @@ The regression lines show the correlation between NMNAT2 and other synaptic prot
 This figure is based on results found in a Western Blot (figure 6; shown above). The figure represents the relationship between NMNAT2 and other synaptic proteins for WT mice and mice heterozygous for NMNAT2. The regression line shows the relationship between both the heterozygotes and the WT mice. The purpose of this experiment was to determine how NMNAT2 interacted with the protein complex HSP90. The paper that this figure was based on (reference below) proved that NMNAT2 complexes with HSP90 to refold aggregated protein substrates. This occurs because NMNAT2 is missing a unique C-terminal ATP site for its refoldase activity. HSP90 activates this site. 
 
 
-#Next Step of Analysis
+## Next Step of Analysis
 I plan on generating a summary statistics table to help explain the figure more. To do this, I will follow the code detailed in the Methods section.
 
 
