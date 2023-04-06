@@ -170,7 +170,7 @@ myplot + ggtitle("NMNAT2 abundance is positively correlated to the levels of syn
 summary(my_data_long)
 
 
-#Results
+# Results
 
 ![Figure 7 Reconstructed](https://github.com/Intro-Sci-Comp-UIowa/biol-4386-course-project-LexysMarie/blob/main/BIOL_project/Intro%20to%20Scientific%20Computing%20Final%20Project.png)
 
