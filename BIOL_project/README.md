@@ -18,6 +18,7 @@ In the figure that I'm recreating (figure 7D; see below), it was determined befo
 
 Fig 7. NMNAT2 abundance is positively correlated to the levels of synaptic proteins. (A-B) Levels of synaptic proteins analyzed by western blotting in DIV10 WT, HET, and KO cortical neurons. n = 3 independent experiments for each genotypes. (C-D) Western analysis for the abundnce of synaptic proteins in the hippocampi of 8-mo-old NMNAT2 HET and WT (n = 6 per genotype). The regression lines show the relationships between NMNAT2 and SNAP25, SYPH, VGluT1, RIM1alpha, HSP90, NR1. Protein levels were normalized to GAPDH. Individual values for 7B and 7D are provided in S1 Data.
 
+
 ##Materials and Methods
 1) How was the experiment performed to produce the data?
 	a. A Western blot analysis was performed. The data is based off that analysis. The figure that I want to reproduce (figure 7D) is a line graph that shows regression lines presenting the correlation between NMNAT2 and SNAP25, SYPH, RIM1alpha, HSP90, and NR1. Protein levels were normalized to GAPDH
@@ -89,7 +90,6 @@ Data acquisition: Link found in original paper
 ##Updated Methods
 Previously, I had wanted to use just R to generate my figure. Now, however, I hope to use the ggplot2 package in R to generate my figure. Below is what the code will look like to do so.
 
-
 # Load the ggplot2 package
 library(gglot2)
 
@@ -136,9 +136,12 @@ myplot + ggtitle("NMNAT2 abundance is positively correlated to the levels of syn
 
 
 #Results
+
 ![Figure 7 Reconstructed](https://github.com/Intro-Sci-Comp-UIowa/biol-4386-course-project-LexysMarie/blob/main/BIOL_project/Intro%20to%20Scientific%20Computing%20Final%20Project.png)
 
+The regression lines show the correlation between NMNAT2 and other synaptic proteins. Synaptic proteins analyzed include SYPH, SNAP25, VGluT1, RIM1alpha, HSP90, and NR1. Protein levels were normalized to GAPDH.
 
+This figure is based on results found in a Western Blot (shown above). The figure represents the relationship between NMNAT2 and other synaptic proteins for WT mice and mice heterozygous for NMNAT2. The regression line shows the relationship between both the heterozygotes and the WT mice. The purpose of this experiment was to determine how NMNAT2 interacted with the protein complex HSP90. The paper that this figure was based on (reference below) proved that NMNAT2 complexes with HSP90 to refold aggregated protein substrates. This occurs because NMNAT2 is missing a unique C-terminal ATP site for its refoldase activity. HSP90 activates this site. 
 
 **References**
 1) Ali YO, Allen HM, Yu L, et al., NMNAT2:HSP90 complex mediates proteostasis in proteinopathies. *PLOS Biology*. June 2 2016; doi:0.1371/journal.phbio.1002472
