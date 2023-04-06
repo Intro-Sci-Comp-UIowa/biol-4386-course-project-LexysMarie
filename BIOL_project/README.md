@@ -1,8 +1,8 @@
-#NMNAT2 Abundance is Positively Correlated to the Level of Syanptic Protein
+# NMNAT2 Abundance is Positively Correlated to the Level of Syanptic Protein
 
 1) Ali YO, Allen HM, Yu L, et al., NMNAT2:HSP90 complex mediates proteostasis in proteinopathies. *PLOS Biology*. June 2 2016; doi:0.1371/journal.pbio.1002472
 
-##Introduction
+## Introduction
 
 Nicotinamide mononucleotide adenylyl transferase (NMNATs) are important for neuronal maintenance of *Drosophila* and humans. Overexpression of these proteins provides neuroprotection in many neurodegenerative models, especially in Wallerian degeneration. NMNATs are also known as nicotinamide adenine dinucleotide (NAD)-synthesizing enzymes. They enable proper flux of NAD, which is an important cofactor in many cellular processes. When inducing Wallerian degeneration, NAD levels are reduced while exogenous NAD application offers neuronal protection. However, if NMNAT enzymatic function is impaired in some way, neuronal protection is reduced. Recently, it's been discovered in *Drosophila* photoreceptor models that NMNAT enzymatic activity is not required to maintain neuronal integreity in these photoreceptors. This data suggests that NMNATs might be able to protect neurons by different mechanisms.
 
@@ -21,7 +21,7 @@ The figure that I'm recreating was based on the results of a Western Blot analys
 Fig 7. NMNAT2 abundance is positively correlated to the levels of synaptic proteins. (A-B) Levels of synaptic proteins analyzed by western blotting in DIV10 WT, HET, and KO cortical neurons. n = 3 independent experiments for each genotypes. (C-D) Western analysis for the abundnce of synaptic proteins in the hippocampi of 8-mo-old NMNAT2 HET and WT (n = 6 per genotype). The regression lines show the relationships between NMNAT2 and SNAP25, SYPH, VGluT1, RIM1alpha, HSP90, NR1. Protein levels were normalized to GAPDH. Individual values for 7B and 7D are provided in S1 Data.
 
 
-##Materials and Methods
+## Materials and Methods
 1) How was the experiment performed to produce the data?
 	a. A Western blot analysis was performed. The data is based off that analysis. The figure that I want to reproduce (figure 7D) is a line graph that shows regression lines presenting the correlation between NMNAT2 and SNAP25, SYPH, RIM1alpha, HSP90, and NR1. Protein levels were normalized to GAPDH
 2) Where and how will you obtain the data?
@@ -40,9 +40,9 @@ Fig 7. NMNAT2 abundance is positively correlated to the levels of synaptic prote
  - Added raw data to data file and in separate folder on github repository on Monday, February 20, 2023; 3:27 pm
 
 
-#Homework 2
+# Homework 2
 
-##Methods
+## Methods
 
 *Data*
 Data source: Excel file
@@ -89,54 +89,84 @@ Data acquisition: Link found in original paper
 1)Generate a summary statistic table:
 	a. vtable::sumtable()
 
-##Updated Methods
+## Updated Methods
 Previously, I had wanted to use just R to generate my figure. Now, however, I hope to use the ggplot2 package in R to generate my figure. Below is what the code will look like to do so.
 
-# Load the ggplot2 package
+
+#Load the ggplot2 package
+
 library(gglot2)
 
-# Create a data frame
+
+#Create a data frame
+
 my_data <- data.frame(name = c("WT1", "WT2", "WT3", "WT4", "WT5", "WT6", "HET1", "HET2", "HET3", "HET4", "HET5", "HET6"), NMNAT2 = c("0.724603176", "1.935285981", " 1.194376889", "0.468602658", "1.047286126", "0.629845166", "0.735759631", "0.54433588", "0.812879015", "0.615205794", "0.384328493", "0.673075112"), Synaptophysin = c("0.584833394", "1.825747734", "1.200558945", "0.472706837", "1.219132475", "0.69702062", "0.696080094", "0.642396035", "0.790869848", "0.71257069", "0.644327111", "0.641081699"), VGlut1 = c("0.591609239", "1.922764792", "1.147024909", "0.467758789", "1.205235506", "0.665606787", "0.805992618", "0.762640644", "0.834154893", "0.758036633", "0.640788908", "0.586475167"), SNAP25 = c("0.646441688", "1.792710831", "1.202546602", "0.518582865", "1.135873224", "0.703844789", "0.607257956", "0.344566696", "0.644909471", "0.340129702", "0.236565536", "0.316922874"), RIM1alpha = c("0.644573303", "2.008459318", "1.182943363", "0.456337862", "1.088250439", "0.619435712", "0.364153437", "0.429002726", "0.67555924", "0.526244116", "0.434676277", "0.648194338"), HSP90 = c("0.67108729", "1.622367883", "0.713046849", "0.505462117", "1.442344145", "1.045691722", "1.746627459", "0.989299181", "1.442918534", "1.023777156", "1.241688804", "0.959784637"), NR1 = c("0.744573243", "1.510272374", "0.628516335", "0.661435632", "1.527965056", "0.927231554", "1.718577613", "0.585098348", "1.472018129", "0.784744929", "1.530708595", "1.747837659"))
 
-# Save as a CSV file
+
+#Save as a CSV file
+
 write.csv(my_data, file = "my_data.csv", row.names = FALSE)
 
-# Import your data
+
+#Import your data
+
 my_data <- read.csv("my_data.csv")
 
+
 #Load tidyr
+
 library(tidyr)
 
+
 #Create grouped data
+
 my_data_long <- gather(my_data, key = "Proteins", value = "value", -c(name, NMNAT2))
 
+
 #Load ggplot2
+
 library(ggplot2)
 
-# Create a ggplot object
+
+#Create a ggplot object
+
 myplot <- ggplot(my_data_long, aes(x = Proteins, y = value))
 
+
 #Convert "name" to a variable
+
 my_data_long %>% mutate(genotype = factor(substr(name, 1, 2), levels = c("HE", "WT"), labels = c("HET", "WT"))) %>%
 
-# Add a scatterplot layer
+
+#Add a scatterplot layer
+
 myplot + geom_point(aes(color = genoytpe))
 
+
 #Add lines of best fit to each of the panels
+
 myplot + geom_smooth(method = "lm", se = FALSE, color = "black", size = 0.5)
 
+
 #Create a paneled scatterplot
+
 myplot + facet_wrap(~Proteins)
 
+
 #Add color to the "HET" and "WT" variables
+
 myplot + scale_color_manual(values = c("WT" = "blue", "HET" = "green")
 
-# Customize the plot with titles and labels
+
+#Customize the plot with titles and labels
+
 myplot + ggtitle("NMNAT2 abundance is positively correlated to the levels of synaptic proteins") +
 	xlab("Normalized NMNAT2 level") +
 	ylab("Normalized fold change")
 
+
 #Generate a summary statistics table
+
 summary(my_data_long)
 
 
