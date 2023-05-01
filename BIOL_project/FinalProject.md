@@ -69,7 +69,7 @@ a. I graphed the figure using ggplot2 in R. The code that I used is displayed be
 
 14. Customize the plot with titles and labels
 
-15. Generate a summary statistics table
+15. Generate a statistical correlation table
 
 
 ## Results and Discussion
@@ -77,7 +77,11 @@ a. I graphed the figure using ggplot2 in R. The code that I used is displayed be
 
 Recreated Figure 7: The regression lines show the correlation between NMNAT2 and other synaptic proteins. Synaptic proteins analyzed include SYPH, SNAP25, VGluT1, RIMalpha, HSP90, and NR1. Protein levels were normalized to GAPDH.
 
-This figure is based on results found in a Western Blot analysis (figure 7C; see above). Overall, the figure showed that the abundance of presynaptic proteins like SYPH, VGluT1, and RIM1alpha are positively correlated with NMNAT2 levels. Additionally, neurofilament levels and MAP2 are correlated with NMNAT2 levels. However, HSP90 and NR1 levels are not significantly related to NMNAT2. This data indicated that NMNAT2 is important for synaptic maintenance. 
+![Correlation Statistics Results](https://github.com/Intro-Sci-Comp-UIowa/biol-4386-course-project-LexysMarie/blob/BIOL_project/Pictures/Screen%20Shot%202023-05-10%20at%203.01.45%20PM.png)
+
+Correlation Statistics Results: This picture shows the correlation statistics results that were generated in R. Displayed is the correlation, p value, low and high confidence intervals. The results were proven to not be statistically significant, based on the p value of 3.96.
+
+This figure is based on results found in a Western Blot analysis (figure 7C; see above). Overall, the figure showed that the abundance of presynaptic proteins like SYPH, VGluT1, and RIM1alpha are positively correlated with NMNAT2 levels. Additionally, neurofilament levels and MAP2 are correlated with NMNAT2 levels. However, HSP90 and NR1 levels are not significantly related to NMNAT2. This data is supported by the correlation statistics (Correlation Statistics Results; see above)  that were generated for this project. The p-value was 3.96, which is much higher than 0.05 (the traditional p-value cutoff). This data indicated that NMNAT2 is important for synaptic maintenance. 
 
 Overall, there aren't any differences between my figure and the original one, even though one was produced in Excel and the other was produced in R using ggplot2. This is because the figure is very simple. It's just a scatterplot showing regression lines that is universally easy to generate.
 
