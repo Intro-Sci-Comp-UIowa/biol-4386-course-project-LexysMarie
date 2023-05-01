@@ -70,6 +70,12 @@ xlab("Normalized NMNAT2 level") +
 ylab("Normalized fold change")
 
 
-#Generate a summary statistics table
+#Generate a statistical correlation table
 
-summary(my_data_long)
+correlation <- cor.test(my_data_long$NMNAT2, my_data_long$value)
+print(correlation
+
+
+#Save correlation as a CSV file
+results <- list(correlation = correlation$estimate, p-value = correlation$p.value, conf_int_low = correlation$conf.int[1], conf_int_high = correlation$conf.int[2]
+write.csv(results, file = "correlation_resutls.csv", row.names = FALSE)
