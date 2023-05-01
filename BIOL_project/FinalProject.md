@@ -73,11 +73,11 @@ a. I graphed the figure using ggplot2 in R. The code that I used is displayed be
 
 
 ## Results and Discussion
-![Recreated Figure 7](https://github.com/Intro-Sci-Comp-UIowa/biol-4386-course-project-LexysMarie/blob/BIOL_project/Intro%20to%20Scientific%20Computing%20Final%20Project.png)
+![Recreated Figure 7](https://github.com/Intro-Sci-Comp-UIowa/biol-4386-course-project-LexysMarie/blob/main/BIOL_project/Pictures/Intro%20to%20Scientific%20Computing%20Final%20Project.png)
 
 Recreated Figure 7: The regression lines show the correlation between NMNAT2 and other synaptic proteins. Synaptic proteins analyzed include SYPH, SNAP25, VGluT1, RIMalpha, HSP90, and NR1. Protein levels were normalized to GAPDH.
 
-![Correlation Statistics Results](https://github.com/Intro-Sci-Comp-UIowa/biol-4386-course-project-LexysMarie/blob/BIOL_project/Pictures/Screen%20Shot%202023-05-01%20at%203.01.45%20PM.png)
+![Correlation Statistics Results](https://github.com/Intro-Sci-Comp-UIowa/biol-4386-course-project-LexysMarie/blob/main/BIOL_project/Pictures/Screen%20Shot%202023-05-01%20at%203.01.45%20PM.png)
 
 Correlation Statistics Results: This picture shows the correlation statistics results that were generated in R. Displayed is the correlation, p value, low and high confidence intervals. The results were proven to not be statistically significant, based on the p value of 3.96.
 
